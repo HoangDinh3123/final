@@ -13,7 +13,6 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building Docker image...
-      - cd posts
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   
@@ -28,6 +27,5 @@ phases:
       - cat imagedefinitions.json
 
 artifacts:
-  base-directory: posts-service
   files:
     - imagedefinitions.json
