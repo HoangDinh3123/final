@@ -28,5 +28,6 @@ phases:
       - cat imagedefinitions.json
 
 artifacts:
+  base-directory: posts-service
   files:
     - imagedefinitions.json
